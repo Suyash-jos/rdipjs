@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="task1.css">
+<script type="text/javascript" src="main.js"></script>
+<title>Calculator</title>
+<script type="text/javascript" >
+function showresult(choise){
+var n1=parseFloat(document.getElementById('num1').value);
+var n2=parseFloat(document.getElementById('num2').value);
+var r;
+var c=choise;
+
+switch(c)
+	{
+	case '1':
+		r=n1+n2;
+		break;
+	case '2':
+		r=n1-n2;
+		break;
+	case '3':
+		r=n1*n2;
+		break;
+	case '4': 
+		r=n1/n2;
+		break;
+	case '5':
+		r=n2*100/n1;
+		break;
+	case '6':
+		r=Math.abs(n1);
+		break;
+	case '7':
+		r=Math.abs(n2);
+		break;
+	case '8':
+		r=Math.sqrt(n1);
+		break;
+	case '9' :
+		r=Math.sqrt(n2);
+	default:
+		break;
+			
+	}
+document.getElementById('result').value=r;	
+
+
+}
+
+</script>
+
+</head>
+<body>
+
+
+<h1>Calculator</h1>
+<table border="1" cellpadding="5" cellspacing="5" width="600">
+<tr align="center">
+<td>First number</td>
+<td>Second Number</td>
+<td>Result</td>
+</tr>
+<tr align="center">
+<td><input name="number1" type="text" size=10 id='num1'/></td>
+<td><input name="number2" type="text" size=10 id='num2'/></td>
+<td> <input type="text" id='result' readonly ></td>
+</tr>
+<tr>
+<td colspan="3">
+<button onclick="showresult('1')">+</button>
+<button onclick="showresult('2')">-</button>
+<button onclick="showresult('3')">*</button>
+<button onclick="showresult('4')">/</button>
+<button onclick="showresult('5')">%</button>
+<button onclick="showresult('6')">Absolute for n1</button>
+<button onclick="showresult('7')">Absolute for n2</button>
+<button onclick="showresult('8')">Sqrt for n1</button>
+<button onclick="showresult('9')">Sqrt for n2</button>
+
+</td>
+</tr>
+
+</table>
+</body>
+</html>
